@@ -9,18 +9,12 @@
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BANNER -->
-  <div class="announcement-bar">
-    🔴 Live Now on Whatnot! — <a href="https://www.whatnot.com/user/palmettocardco" target="_blank">Join the Break</a>
-  </div>
-
   <!-- SIDEBAR -->
   <nav class="sidebar">
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#whatnot">Whatnot</a></li>
-      <li><a href="#products">Products</a></li>
       <li><a href="#featured">Featured</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -58,19 +52,8 @@
     <a href="https://www.whatnot.com/user/palmettocardco" class="btn">Follow on Whatnot</a>
   </section>
 
-  <!-- PRODUCTS -->
-  <section class="section" id="products">
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">Booster Packs</div>
-      <div class="card">Live Breaks</div>
-      <div class="card">Singles</div>
-      <div class="card">Slabs</div>
-    </div>
-  </section>
-
   <!-- FEATURED PRODUCTS -->
-  <section class="section dark" id="featured">
+  <section class="section" id="featured">
     <h2>Featured Products</h2>
     <p class="section-sub">Hand picked from our latest inventory</p>
     <div class="featured-grid">
@@ -96,31 +79,29 @@
   </section>
 
   <!-- REVIEWS -->
-  <section class="section" id="reviews">
+  <section class="section dark" id="reviews">
     <h2>What Collectors Say</h2>
     <p class="section-sub">Trusted by collectors across South Carolina and beyond</p>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Fast shipping, great communication, and the cards were exactly as described. Will definitely buy again!"</p>
         <span>— James T., Verified Buyer</span>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"The live breaks are so much fun. Super transparent and always a great time. Highly recommend!"</p>
         <span>— Sarah M., Whatnot Customer</span>
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>"Best card shop in South Carolina. Hometown feel with professional service every time."</p>
         <span>— Mike R., Repeat Customer</span>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section dark" id="faq">
+  <section class="section" id="faq">
     <h2>Frequently Asked Questions</h2>
+    <p class="section-sub">Everything you need to know about shopping with us</p>
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question">How do live breaks work?</button>
@@ -156,7 +137,7 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <section class="section" id="newsletter">
+  <section class="section dark" id="newsletter">
     <h2>Never Miss a Drop</h2>
     <p class="section-sub">Sign up for updates on new breaks, restocks, and exclusive deals</p>
     <div class="newsletter-form">
@@ -166,7 +147,7 @@
   </section>
 
   <!-- SOCIAL -->
-  <section class="section dark" id="social">
+  <section class="section" id="social">
     <h2>Stay Connected</h2>
     <p class="section-sub">Follow us for drops, hits, and stream updates</p>
     <div class="social-links">
@@ -177,7 +158,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section class="section dark" id="contact">
     <h2>Get In Touch</h2>
     <p class="section-sub">Questions about an order, bulk buying, or partnerships? We'd love to hear from you.</p>
     <div class="contact-form">
@@ -199,7 +180,6 @@
   </footer>
 
   <script>
-    // Scroll fade-in animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -213,7 +193,6 @@
       observer.observe(el);
     });
 
-    // Highlight active sidebar link on scroll
     const sections = document.querySelectorAll('header, section, footer');
     const navLinks = document.querySelectorAll('.sidebar a');
     const activeObserver = new IntersectionObserver((entries) => {
@@ -228,7 +207,6 @@
     }, { threshold: 0.5 });
     sections.forEach(section => activeObserver.observe(section));
 
-    // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
