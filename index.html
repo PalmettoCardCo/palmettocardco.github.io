@@ -60,5 +60,21 @@
     <p>© 2026 Palmetto Card Co.</p>
   </footer>
 
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section, .card, footer').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
 </body>
 </html>
