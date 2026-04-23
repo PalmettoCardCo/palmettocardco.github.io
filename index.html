@@ -161,12 +161,12 @@
   <section class="section dark" id="contact">
     <h2>Get In Touch</h2>
     <p class="section-sub">Questions about an order, bulk buying, or partnerships? We'd love to hear from you.</p>
-    <div class="contact-form">
-      <input type="text" placeholder="Your Name" class="contact-input">
-      <input type="email" placeholder="Your Email" class="contact-input">
-      <textarea class="contact-input" rows="5" placeholder="Your Message"></textarea>
-      <a href="mailto:palmettocardco@gmail.com" class="btn">Send Message</a>
-    </div>
+   <form class="contact-form" action="https://formspree.io/f/mbdqppjv" method="POST">
+  <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
+  <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
+  <textarea name="message" class="contact-input" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send Message</button>
+</form>
   </section>
 
   <!-- FOOTER -->
